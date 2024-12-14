@@ -1,0 +1,9 @@
+services:
+    alpine:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        stdin_open: true
+        tty: true
+        volumes:
+            - .:/app/js/raw/node
