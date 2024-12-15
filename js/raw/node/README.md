@@ -21,3 +21,14 @@ apk add nodejs npm
 npm init
 npm run start
 ```
+
+## set Env
+
+edit `compose.yml:5-6`.
+
+```yml
+# dockerfile: Dockerfile.ini
+dockerfile: Dockerfile.staged
+```
+
+And `npm run start` in container.
