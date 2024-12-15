@@ -19,4 +19,5 @@ apk upgrade
 apk add nodejs npm
 
 npm init
+npm run start
 ```
