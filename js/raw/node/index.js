@@ -1,14 +1,16 @@
 const http = require("http");
+const {readFile} = require("node:fs");
+
 const port = 3000;
 
 const server = http.createServer((request, response) => {
-    response.writeHead(200, {
-        "Content-Type": "text/html"
+    readFile("./index.html", "utf-8", (error, data) => {
+        response.writeHead(200, {
+            "Content-Type": "text/html"
+        });
+        response.write(data);
+        response.end();
     });
-
-    const responseMessage = "<h1>Hello World</h1>";
-    response.end(responseMessage);
-    console.log(`Send a response : ${responseMessage}`);
 });
 
 server.listen(port);
