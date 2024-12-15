@@ -1,0 +1,5 @@
+FROM alpine:latest
+
+RUN apk update && apk upgrade && apk add deno
+
+WORKDIR /app/js/raw/deno
