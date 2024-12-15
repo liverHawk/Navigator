@@ -1,0 +1,12 @@
+services:
+    alpine:
+        build:
+            context: .
+            dockerfile: Dockerfile.ini
+#            dockerfile: Dockerfile.staged
+        stdin_open: true
+        tty: true
+        volumes:
+            - .:/app/js/raw/deno
+        ports:
+            - "8000:8000"
