@@ -1,3 +1,3 @@
 FROM alpine:latest
 
-WORKDIR /app
+WORKDIR /app/js/raw/node

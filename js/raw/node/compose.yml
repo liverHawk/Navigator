@@ -7,3 +7,5 @@ services:
         tty: true
         volumes:
             - .:/app/js/raw/node
+        ports:
+            - "3000:3000"
